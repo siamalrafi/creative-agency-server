@@ -51,9 +51,6 @@ exports.getServices = async (req, res, next) => {
 // get a service by id
 exports.getServicesByCategories = async (req, res, next) => {
     try {
-
-        console.log(req.params.categories);
-
         const result = await getServicesByCategoriesHelper(req.params.categories);
 
         res.status(200).json({

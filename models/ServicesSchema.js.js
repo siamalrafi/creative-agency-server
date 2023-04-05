@@ -64,13 +64,11 @@ servicesSchema.pre("save", function (next) {
 
 servicesSchema.methods.logger = function () {
     console.log(`Data is ${this.name}`);
-}
+};
 
 
 
 const Services = mongoose.model('ServicesCollection', servicesSchema)
-
-
 
 // export Services
 module.exports = Services;
