@@ -1,1 +1,1 @@
-# Get started with creative-agency-server.
+## Get started with creative-agency-server.
