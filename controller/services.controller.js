@@ -25,7 +25,22 @@ exports.createServices = async (req, res, next) => {
 };
 
 
-
+// get all services
+exports.getServices = async (req, res, next) => {
+    try {
+        res.status(200).json({
+            status: 'success',
+            massage: "Data inserted Successfully!",
+            data: "result"
+        })
+    } catch (error) {
+        res.status(400).json({
+            status: 'error',
+            massage: "Data inserted Error",
+            error: error.message
+        })
+    }
+}
 
 
 

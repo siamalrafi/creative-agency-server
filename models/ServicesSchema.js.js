@@ -18,22 +18,6 @@ const servicesSchema = new mongoose.Schema({
         required: true,
         min: [0, "price can't be negative."]
     },
-    quantity: {
-        type: Number,
-        required: true,
-        min: [0, "quantity can't be negative."],
-        validate: {
-            validator: (value) => {
-                const isInteger = Number.isInteger(value);
-                if (isInteger) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        },
-        massage: "quantity value can't be negative"
-    },
     status: {
         type: String,
         required: true,
@@ -55,9 +39,12 @@ const servicesSchema = new mongoose.Schema({
         ref: "Supplier",
     },
     categories: [{
-        name: {
-            type: "string",
-            required: true,
+        type: String,
+        required: true,
+        enum: {
+            values: ["Website Design & Development", "Digital Marketing", "Web & Mobile design", "Branding & Design",
+                "Content Creation", "UX/UI Design"],
+            massage: "categories value can't be others."
         },
         _id: mongoose.Schema.Types.ObjectId
     }]
