@@ -8,7 +8,8 @@ router.route("/")
     .get(servicesController.getServices)
 
 
-
+router.route("/:categories")
+    .get(servicesController.getServicesByCategories)
 
 
 module.exports = router;
