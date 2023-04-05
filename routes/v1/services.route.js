@@ -5,8 +5,6 @@ const router = express.Router();
 router.route("/")
     .get()
 
-//  creative-agency
-// j3d6oXDPUkVZalcf
 
 
 

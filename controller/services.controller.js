@@ -1,11 +1,11 @@
-const Services = require("../models/Services");
+const Services = require("../models/ServicesSchema.js");
 
 
 // Create a new Service
 exports.createServices = async (req, res, next) => {
     try {
         // save or create a new Services
-        const result = await createServicesService(req.body);
+        const result = await Services.create(req.body);
 
         // const Services = new Services(req.body);
         // const result = await Services.save();
@@ -22,7 +22,12 @@ exports.createServices = async (req, res, next) => {
             error: error.message
         })
     }
-}
+};
+
+
+
+
+
 
 
 

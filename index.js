@@ -4,7 +4,13 @@ const colors = require("colors");
 
 const app = require("./app");
 
- 
+// DATABASE PASSWOARD
+/*
+ //  creative-agency
+// j3d6oXDPUkVZalcf
+ */
+
+
 
 // mongoose.connect('mongodb://localhost:27017/').then(() => {
 mongoose.connect(process.env.DATABASE).then(() => {
