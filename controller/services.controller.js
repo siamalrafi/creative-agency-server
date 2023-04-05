@@ -1,3 +1,4 @@
+const { createServicesHelper } = require("../helpers/services.helpers.js");
 const Services = require("../models/ServicesSchema.js");
 
 
@@ -5,7 +6,8 @@ const Services = require("../models/ServicesSchema.js");
 exports.createServices = async (req, res, next) => {
     try {
         // save or create a new Services
-        const result = await Services.create(req.body);
+        console.log(req.body);
+        const result = await createServicesHelper(req.body);
 
         // const Services = new Services(req.body);
         // const result = await Services.save();
@@ -13,7 +15,7 @@ exports.createServices = async (req, res, next) => {
         res.status(200).json({
             status: 'success',
             massage: "Data inserted Successfully!",
-            data: result
+            data: "result"
         })
     } catch (error) {
         res.status(400).json({

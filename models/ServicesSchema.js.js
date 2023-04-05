@@ -74,6 +74,3 @@ const Services = mongoose.model('Services', servicesSchema)
 
 // export Services
 module.exports = Services;
-
-
-

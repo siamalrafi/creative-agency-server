@@ -13,9 +13,14 @@ const app = require("./app");
 
 
 // mongoose.connect('mongodb://localhost:27017/').then(() => {
-mongoose.connect(process.env.DATABASE).then(() => {
-    console.log("`Database Connection successfully established`".red.bold);
-});
+mongoose.connect(process.env.DATABASE)
+    .then(() => {
+        console.log("`Database Connection successfully established`".red.bold);
+    });
+
+if (mongoose.connection.readyState != 1) {
+    console.log("error: connection");
+}
 
 
 
