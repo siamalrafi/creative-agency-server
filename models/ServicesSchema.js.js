@@ -68,7 +68,7 @@ servicesSchema.methods.logger = function () {
 
 
 
-const Services = mongoose.model('Services', servicesSchema)
+const Services = mongoose.model('ServicesCollection', servicesSchema)
 
 
 
