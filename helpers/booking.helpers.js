@@ -6,6 +6,3 @@ exports.createBookingHelper = async (data) => {
     return result;
 };
 
-
-
-

@@ -3,10 +3,8 @@ const { createBookingHelper } = require("../helpers/booking.helpers");
 
 
 exports.createBooking = async (req, res, next) => {
-
     try {
         // save or create a new booking
-   
         const result = await createBookingHelper(req.body);
 
         res.status(200).json({
@@ -21,5 +19,4 @@ exports.createBooking = async (req, res, next) => {
             error: error.message
         })
     }
-
-}
+};

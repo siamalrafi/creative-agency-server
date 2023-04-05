@@ -45,9 +45,6 @@ exports.getServices = async (req, res, next) => {
 
 
 
-
-
-
 // get a service by id
 exports.getServicesByCategories = async (req, res, next) => {
     try {
@@ -65,7 +62,7 @@ exports.getServicesByCategories = async (req, res, next) => {
             error: error.message
         })
     }
-}
+};
 
 
 

@@ -67,7 +67,6 @@ servicesSchema.methods.logger = function () {
 };
 
 
-
 const Services = mongoose.model('ServicesCollection', servicesSchema)
 
 // export Services
