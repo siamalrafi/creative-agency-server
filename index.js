@@ -12,9 +12,6 @@ const app = require("./app");
 
 
 
-// mongoose.connect('mongodb+srv://creative-agency:j3d6oXDPUkVZalcf@cluster0.ksaovkw.mongodb.net/Creative-Agency');
-
-
 mongoose.connect(process.env.DATABASE).then(() => {
     console.log("database connection established.".black.bold);
 })
