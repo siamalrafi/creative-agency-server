@@ -20,4 +20,12 @@ exports.getUsersHelpers = async () => {
 exports.deleteUserHelpers = async (id) => {
     const result = await UserModel.deleteOne({ _id: id });
     return result
+};
+
+
+// get user by their email address --
+exports.getUserByEmailHelper = async (email) => {
+    console.log(email);
+    const result = await UserModel.find({ email: email });
+    return result
 }

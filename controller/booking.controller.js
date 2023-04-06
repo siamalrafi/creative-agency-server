@@ -64,7 +64,23 @@ exports.deleteBooking = async (req, res, next) => {
 
 
 
-
+// getBookingsByEmail ----
+exports.getBookingsByEmail = async (req, res, next) => {
+    try {
+        const result = await getBookingsByEmailHelper(req.params.email)
+        res.status(200).json({
+            status: "success",
+            massage: "delete Bookings Successfully",
+            data: result
+        })
+    } catch (error) {
+        res.status(400).json({
+            status: "error",
+            massage: "delete Bookings Error",
+            error: error.message
+        })
+    };
+};
 
 
 

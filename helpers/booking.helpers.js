@@ -19,5 +19,8 @@ exports.deleteBookingHelper = async (id) => {
     return result;
 }
 
-
-
+// getBookingsByEmailHelper ---
+exports.getBookingsByEmailHelper = async (email) => {
+    const result = await Booking.find({ email: email });
+    return result;
+}

@@ -8,6 +8,9 @@ router.route("/")
     .post(bookingController.createBooking)
     .get(bookingController.getBookings)
 
+router.route("/das/:email")
+    .get(bookingController.getBookingsByEmail)
+
 router.route("/:id")
     .delete(bookingController.deleteBooking)
 

@@ -12,8 +12,9 @@ router.route("/")
 router.route("/:id")
     .delete(userController.deleteUser)
 
-
-
+// get user by there email address ---
+router.route("/das/:email")
+    .get(userController.getUserByEmail)
 
 
 
