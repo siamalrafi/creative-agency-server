@@ -9,6 +9,12 @@ router.route("/")
 
 
 
+router.route("/:id")
+    .delete(userController.deleteUser)
+
+
+
+
 
 
 

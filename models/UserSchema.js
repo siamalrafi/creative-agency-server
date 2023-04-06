@@ -18,7 +18,10 @@ const userSchema = new mongoose.Schema({
     role: {
         type: String,
         required: [true, "Please provide a role"],
-        trim: true, // without spaces
+        enum: {
+            values: ["user", "admin"],
+            massage: "role value can't be others."
+        },
     },
     createdAt: {
         type: Date,

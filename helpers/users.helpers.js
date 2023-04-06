@@ -9,12 +9,15 @@ exports.createUserHelpers = async (data) => {
 };
 
 
-
 // get all users -------
-exports.getUsersHelpers = async()=>{
+exports.getUsersHelpers = async () => {
     const result = await UserModel.find();
     return result
 };
 
 
-
+// delete a user by id 
+exports.deleteUserHelpers = async (id) => {
+    const result = await UserModel.deleteOne({ _id: id });
+    return result
+}
