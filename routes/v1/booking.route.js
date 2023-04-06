@@ -8,7 +8,8 @@ router.route("/")
     .post(bookingController.createBooking)
     .get(bookingController.getBookings)
 
-
+router.route("/:id")
+    .delete(bookingController.deleteBooking)
 
 
 module.exports = router;

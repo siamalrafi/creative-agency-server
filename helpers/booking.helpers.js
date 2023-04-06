@@ -13,7 +13,11 @@ exports.getBookingsHelpers = async () => {
     return result;
 };
 
-
+// delete a booking helper ------
+exports.deleteBookingHelper = async (id) => {
+    const result = await Booking.deleteOne({ _id: id });
+    return result;
+}
 
 
 

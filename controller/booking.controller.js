@@ -1,4 +1,4 @@
-const { createBookingHelper, getBookingsHelpers } = require("../helpers/booking.helpers");
+const { createBookingHelper, getBookingsHelpers, deleteBookingHelper } = require("../helpers/booking.helpers");
 
 
 
@@ -42,6 +42,29 @@ exports.getBookings = async (req, res, next) => {
             error: error.message
         })
     }
-}
+};
+
+exports.deleteBooking = async (req, res, next) => {
+    try {
+        const result = await deleteBookingHelper(req.params.id);
+
+        res.status(200).json({
+            status: "success",
+            massage: "delete Bookings Successfully",
+            data: result
+        })
+    } catch (error) {
+        res.status(400).json({
+            status: "error",
+            massage: "delete Bookings Error",
+            error: error.message
+        })
+    }
+};
+
+
+
+
+
 
 
