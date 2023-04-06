@@ -1,4 +1,4 @@
-const { createUserHelpers } = require("../helpers/users.helpers");
+const { createUserHelpers, getUsersHelpers } = require("../helpers/users.helpers");
 
 exports.createUser = async (req,res,next) => {
     try {
@@ -17,6 +17,24 @@ exports.createUser = async (req,res,next) => {
         })
     }
 };
+
+
+exports.getUsers = async(req,res,next)=>{
+    try {
+        const result = await getUsersHelpers();
+        res.status(200).json({
+            status: "success",
+            massage:"get users successfully.",
+            data: result
+        })
+    } catch (error) {
+        res.status(400).json({
+            status:"error",
+            massage:"get users failed",
+            error: error.message
+        })
+    }
+}
 
 
 

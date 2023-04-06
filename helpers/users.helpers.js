@@ -10,7 +10,11 @@ exports.createUserHelpers = async (data) => {
 
 
 
-
+// get all users -------
+exports.getUsersHelpers = async()=>{
+    const result = await UserModel.find();
+    return result
+};
 
 
 
