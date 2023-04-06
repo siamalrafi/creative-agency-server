@@ -21,11 +21,16 @@ const bookingSchema = ({
         type: Number,
         required: true,
         min: [0, "price can't be negative."]
-    }
-}, {
-    timestamps: true,
-});
-
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
+    updateAt: {
+        type: Date,
+        default: Date.now,
+    },
+})
 
 
 const Booking = mongoose.model('BookingCollection', bookingSchema);
