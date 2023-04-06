@@ -3,6 +3,8 @@ const app = express();
 const cors = require("cors");
 const ServicesRoute = require("./routes/v1/services.route");
 const BookingRoutes = require("./routes/v1/booking.route");
+const UserRoutes = require("./routes/v1/user.route");
+
 
 
 // middleware
@@ -13,7 +15,12 @@ app.use(cors());
 
 // get all products
 app.use("/api/v1/services", ServicesRoute);
-app.use("/api/v1/bookings",BookingRoutes);
+
+// all bookings routes
+app.use("/api/v1/bookings", BookingRoutes);
+
+// all user routes
+app.use("/api/v1/users", UserRoutes)
 
 
 app.get('/', (req, res) => {
