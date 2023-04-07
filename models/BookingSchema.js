@@ -11,7 +11,6 @@ const bookingSchema = ({
         type: String,
         required: [true, "Please provide a email address."],
         trim: true, // without spaces
-        unique: [true, "Please provide a unique email address."],
     },
     serviceName: {
         type: String,

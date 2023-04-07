@@ -1,4 +1,4 @@
-const { createBookingHelper, getBookingsHelpers, deleteBookingHelper } = require("../helpers/booking.helpers");
+const { createBookingHelper, getBookingsHelpers, deleteBookingHelper, getBookingsByEmailHelper } = require("../helpers/booking.helpers");
 
 
 
@@ -67,6 +67,7 @@ exports.deleteBooking = async (req, res, next) => {
 // getBookingsByEmail ----
 exports.getBookingsByEmail = async (req, res, next) => {
     try {
+        console.log(req.params.email);
         const result = await getBookingsByEmailHelper(req.params.email)
         res.status(200).json({
             status: "success",

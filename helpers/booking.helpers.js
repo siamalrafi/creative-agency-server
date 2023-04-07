@@ -17,10 +17,10 @@ exports.getBookingsHelpers = async () => {
 exports.deleteBookingHelper = async (id) => {
     const result = await Booking.deleteOne({ _id: id });
     return result;
-}
+};
 
 // getBookingsByEmailHelper ---
 exports.getBookingsByEmailHelper = async (email) => {
     const result = await Booking.find({ email: email });
     return result;
-}
+};

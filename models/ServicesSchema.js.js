@@ -50,7 +50,7 @@ const servicesSchema = new mongoose.Schema({
     }]
 }, {
     timestamps: true,
-})
+});
 
 
 // do something after inserting data into database
