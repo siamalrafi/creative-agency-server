@@ -23,8 +23,6 @@ exports.createBooking = async (req, res, next) => {
 
 
 
-
-
 // get all bookings --------
 exports.getBookings = async (req, res, next) => {
     try {
@@ -63,7 +61,6 @@ exports.deleteBooking = async (req, res, next) => {
 };
 
 
-
 // getBookingsByEmail ----
 exports.getBookingsByEmail = async (req, res, next) => {
     try {
@@ -82,6 +79,3 @@ exports.getBookingsByEmail = async (req, res, next) => {
         })
     };
 };
-
-
-

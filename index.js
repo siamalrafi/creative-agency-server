@@ -6,7 +6,6 @@ const app = require("./app");
 
 
 
-
 mongoose.connect(process.env.DATABASE).then(() => {
     console.log("database connection established.".black.bold);
 });
@@ -17,4 +16,5 @@ const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
     console.log(`Creative Server app listening on port ${port}`.bgBlue) //available
-})
+});
+
