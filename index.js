@@ -4,10 +4,7 @@ const colors = require("colors");
 
 const app = require("./app");
 
-/*
- //  creative-agency
-// j3d6oXDPUkVZalcf
- */
+
 
 
 mongoose.connect(process.env.DATABASE).then(() => {
